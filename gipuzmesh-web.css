@@ -1,0 +1,632 @@
+/* ===== GIPUZMESH — STYLE.CSS ===== */
+
+/* 1. RESET ETA OINARRIAK */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Dark Teal / Slate Iluna */
+    color: #f8fafc;            /* Testu argia kontraste alturako */
+    line-height: 1.6;
+}
+
+/* Oinarrizko layout edukiontzia */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: #111827; /* Hondo ilunagoa alternantziarako */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #38bdf8; /* Urdin argi akzentua */
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* 2. NAVBAR (MENU FINKOA) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1e293b;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: #10b981; /* Berde tekniko distiratsua */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* 3. HERO BANNER */
+.hero {
+    padding-top: 160px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BOTOIAK (BUTTONS) */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #10b981;
+    color: #0f172a;
+}
+
+.btn-primary:hover {
+    background-color: #059669;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #f8fafc;
+    border: 2px solid #334155;
+}
+
+.btn-outline:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* 4. TXARTELAK ETA GRID LAYOUT-A */
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-color: #1e293b; /* Slate Blue kaxak */
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.service-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style: none;
+    border-top: 1px solid #334155;
+    padding-top: 12px;
+}
+
+.feature-list li {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* 5. INFORMAZIO OROKORRA, PSAI ETA SALMENTEN ANALISIA */
+.info-intro h3 {
+    font-size: 1.4rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.widget-card .widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.widget-tag {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid #334155;
+}
+
+.sdg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sdg-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #0f172a;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.sdg-badge {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.sdg-9 { background-color: #f36e21; }  /* ODS 9 Orania */
+.sdg-12 { background-color: #cf8d2a; } /* ODS 12 Horixka */
+.sdg-13 { background-color: #3f7e44; } /* ODS 13 Berdea */
+
+.sdg-item h4 {
+    font-size: 0.95rem;
+    color: #f8fafc;
+    margin-bottom: 2px;
+}
+
+.sdg-item p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* EXCEL SALMENTEN GRAFIKOA (BA) */
+.chart-box {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border: 1px solid #334155;
+}
+
+.chart-placeholder {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 160px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 5px;
+}
+
+.chart-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-pair {
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+    height: 120px;
+}
+
+.bar {
+    width: 16px;
+    border-radius: 3px 3px 0 0;
+    transition: height 0.5s ease;
+}
+
+.bar-2024 { background-color: #64748b; }
+.bar-2025 { background-color: #10b981; }
+
+.bar-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.legend-2024 { background-color: #64748b; }
+.legend-2025 { background-color: #10b981; }
+
+/* 6. ERRESERBA (CALENDAR WIDGET & STATUS) */
+.reservation-box {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.status-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-indicator.online {
+    background-color: #10b981;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.status-text {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.calendar-widget {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #334155;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header h3 {
+    font-size: 1.1rem;
+    color: #f8fafc;
+}
+
+.cal-btn {
+    background-color: #1e293b;
+    color: #fff;
+    border: 1px solid #334155;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+.day-name {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #38bdf8;
+    padding-bottom: 8px;
+}
+
+.day {
+    padding: 10px 0;
+    background-color: #1e293b;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.day.muted {
+    color: #475569;
+    background-color: transparent;
+}
+
+.day.active {
+    background-color: #10b981;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.booking-time-picker h4 {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+.time-slots {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.time-slot {
+    flex: 1;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-slot.active, .time-slot:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* 7. IRITZIAK (TESTIMONIALS) */
+.testimonial-card .stars {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.author-info strong {
+    display: block;
+    color: #f8fafc;
+}
+
+.author-info span {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* 8. KONTAKTUA ETA INPRIMAKIA */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #10b981;
+}
+
+.contact-details {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.contact-details li {
+    margin-bottom: 12px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.map-box {
+    height: 180px;
+    background-color: #0f172a;
+    border: 1px dashed #334155;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* 9. FOOTER */
+.footer {
+    background-color: #0b0f19;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* UTILITIES */
+.mt-3 { margin-top: 15px; }
+.mt-4 { margin-top: 25px; }
+.mb-3 { margin-bottom: 15px; }
+
+/* RESPONSIVE DESIGN (MUGIKORRAK ETA TABLETAK) */
+@media (max-width: 768px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .time-slots {
+        flex-direction: column;
+    }
+}
