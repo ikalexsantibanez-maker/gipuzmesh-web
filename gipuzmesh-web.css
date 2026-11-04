@@ -635,4 +635,10 @@ body {
     .time-slots {
         flex-direction: column;
     }
+
+    .header-eta-menua {
+        height: auto;
+        width: auto;
+        margin-top: 10px;
+    }
 }
