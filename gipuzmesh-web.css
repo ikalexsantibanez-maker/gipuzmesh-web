@@ -638,7 +638,8 @@ body {
 
     .header-eta-menua {
         height: auto;
-        width: auto;
+        max-width: 100%;
+        width: 50%;
         margin-top: 10px;
     }
 }
