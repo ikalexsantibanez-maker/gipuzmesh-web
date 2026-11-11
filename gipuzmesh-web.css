@@ -1,6 +1,8 @@
 /* ===== GIPUZMESH — STYLE.CSS ===== */
 
 /* 1. RESET ETA OINARRIAK */
+/*.gjh-card { outline: 5px solid red !important; }*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -386,6 +388,62 @@ body {
 .legend-2024 { background-color: #64748b; }
 .legend-2025 { background-color: #10b981; }
 
+    .gjh-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .gjh-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gjh-card {
+    flex: 1;
+    min-width: 240px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.gjh-card span {
+    align-self: flex-start;
+    background: #2F5496;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.gjh-card h4 {
+    color: #1f3864;
+    margin: 0 0 8px 0;
+}
+
+.gjh-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4a5568;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.gjh-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    align-self: center;
+}
+
+
 /* 6. ERRESERBA (CALENDAR WIDGET & STATUS) */
 .reservation-box {
     max-width: 750px;
@@ -650,51 +708,10 @@ body {
         width: 50%;
         margin-top: 10px;
     }
-    .gjh-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 20px;
-    }
 
-    .gjh-grid > div {
-        flex: 1;
-        min-width: 240px;
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #e0e0e0;
-        display: flex;
-        flex-direction: column;
-    }
 
-    .gjh-grid span {
-        align-self: flex-start;
-        background: #2F5496;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 0.85rem;
-        padding: 4px 10px;
-        border-radius: 4px;
-        margin-bottom: 10px; }
+/*.gjh-card {
+    outline: 5px solid red !important;
+}*/
 
-        .gjh-grid h4 {
-        color: #1f3864;
-        margin: 0 0 8px 0;
-        }
-
-        .gjh-grid p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: #4a5568;
-        flex-grow: 1;
-        margin-bottom: 15px;
-        }
-
-        .gjh-icon {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        align-self: center;
-        }
 }
