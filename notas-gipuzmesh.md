@@ -30,16 +30,47 @@ function seleccionarUno(botones) {
 
 seleccionarUno(document.querySelectorAll(".calendar-grid .day"));
 seleccionarUno(document.querySelectorAll(".time-slot"));
+<!-- A mter si se elige la opcion 1-->
 Lo siguiente meterlo en el body del html:
 <script src="gipuzmesh-web.js"></script>
 
 Opcion 2:
-Sustituye los 28 botones de día por pares input + label. El input tiene que ir justo antes de su label:
+Sustituir los 28 botones de día por pares input + label. El input tiene que ir justo antes de su label:
 <input type="radio" name="dia" id="dia1" class="day-radio"><label for="dia1" class="day">1</label>
 <input type="radio" name="dia" id="dia2" class="day-radio"><label for="dia2" class="day">2</label>
 <input type="radio" name="dia" id="dia3" class="day-radio"><label for="dia3" class="day">3</label>
+<input type="radio" name="dia" id="dia4" class="day-radio"><label for="dia4" class="day">4</label>
 <!-- ... y así hasta el 28, cambiando el número en id, for y el texto -->
 <input type="radio" name="dia" id="dia28" class="day-radio"><label for="dia28" class="day">28</label>
+<!--version extendida de lo de arriba-->
+<input type="radio" name="dia" id="dia1" class="day-radio"><label for="dia1" class="day">1</label>
+<input type="radio" name="dia" id="dia2" class="day-radio"><label for="dia2" class="day">2</label>
+<input type="radio" name="dia" id="dia3" class="day-radio"><label for="dia3" class="day">3</label>
+<input type="radio" name="dia" id="dia4" class="day-radio"><label for="dia4" class="day">4</label>
+<input type="radio" name="dia" id="dia5" class="day-radio"><label for="dia5" class="day">5</label>
+<input type="radio" name="dia" id="dia6" class="day-radio"><label for="dia6" class="day">6</label>
+<input type="radio" name="dia" id="dia7" class="day-radio"><label for="dia7" class="day">7</label>
+<input type="radio" name="dia" id="dia8" class="day-radio"><label for="dia8" class="day">8</label>
+<input type="radio" name="dia" id="dia9" class="day-radio"><label for="dia9" class="day">9</label>
+<input type="radio" name="dia" id="dia10" class="day-radio"><label for="dia10" class="day">10</label>
+<input type="radio" name="dia" id="dia11" class="day-radio"><label for="dia11" class="day">11</label>
+<input type="radio" name="dia" id="dia12" class="day-radio"><label for="dia12" class="day">12</label>
+<input type="radio" name="dia" id="dia13" class="day-radio"><label for="dia13" class="day">13</label>
+<input type="radio" name="dia" id="dia14" class="day-radio"><label for="dia14" class="day">14</label>
+<input type="radio" name="dia" id="dia15" class="day-radio"><label for="dia15" class="day">15</label>
+<input type="radio" name="dia" id="dia16" class="day-radio"><label for="dia16" class="day">16</label>
+<input type="radio" name="dia" id="dia17" class="day-radio"><label for="dia17" class="day">17</label>
+<input type="radio" name="dia" id="dia18" class="day-radio"><label for="dia18" class="day">18</label>
+<input type="radio" name="dia" id="dia19" class="day-radio"><label for="dia19" class="day">19</label>
+<input type="radio" name="dia" id="dia20" class="day-radio"><label for="dia20" class="day">20</label>
+<input type="radio" name="dia" id="dia21" class="day-radio"><label for="dia21" class="day">21</label>
+<input type="radio" name="dia" id="dia22" class="day-radio"><label for="dia22" class="day">22</label>
+<input type="radio" name="dia" id="dia23" class="day-radio"><label for="dia23" class="day">23</label>
+<input type="radio" name="dia" id="dia24" class="day-radio"><label for="dia24" class="day">24</label>
+<input type="radio" name="dia" id="dia25" class="day-radio"><label for="dia25" class="day">25</label>
+<input type="radio" name="dia" id="dia26" class="day-radio"><label for="dia26" class="day">26</label>
+<input type="radio" name="dia" id="dia27" class="day-radio"><label for="dia27" class="day">27</label>
+<input type="radio" name="dia" id="dia28" class="day-radio"><label for="dia28" class="day">28</label>   
 
 <div class="time-slots">
     <input type="radio" name="txanda" id="txanda1" class="slot-radio" checked><label for="txanda1" class="time-slot">09:00 - Goizeko Txanda</label>
@@ -74,6 +105,12 @@ Si se a añadido antes el button.day {...} borrarlo
 .day-radio:focus-visible + .day,
 .slot-radio:focus-visible + .time-slot {
     outline: 2px solid #38bdf8;
+}
+
+Para solucionar el problema q dava poner <imput type "radio"> (ponia n circulo blanco al lado de cada boton) se a colocado el proximo codigo dentro del archivo CSS en el apartado de */ERRESERBA...
+
+input[type="radio"] {
+    display: none;
 }
 
 Ninguna de estas opciones estrictamente correcta con la realidad, y ninguna activa las flechas laterales superiores.

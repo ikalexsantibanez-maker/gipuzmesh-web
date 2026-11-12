@@ -15,12 +15,11 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a; /* Dark Teal / Slate Iluna */
-    color: #f8fafc;            /* Testu argia kontraste alturako */
+    background-color: #0f172a; 
+    color: #f8fafc;            
     line-height: 1.6;
 }
 
-/* Oinarrizko layout edukiontzia */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -32,7 +31,7 @@ body {
 }
 
 .section-alt {
-    background-color: #111827; /* Hondo ilunagoa alternantziarako */
+    background-color: #111827; 
 }
 
 .section-title {
@@ -42,7 +41,7 @@ body {
 
 .section-title h2 {
     font-size: 2.2rem;
-    color: #38bdf8; /* Urdin argi akzentua */
+    color: #38bdf8; 
     margin-bottom: 10px;
 }
 
@@ -81,7 +80,7 @@ body {
 }
 
 .logo span {
-    color: #10b981; /* Berde tekniko distiratsua */
+    color: #10b981; 
 }
 
 .nav-links {
@@ -202,7 +201,7 @@ body {
 }
 
 .card {
-    background-color: #1e293b; /* Slate Blue kaxak */
+    background-color: #1e293b;
     border-radius: 8px;
     padding: 30px;
     border: 1px solid #334155;
@@ -566,6 +565,36 @@ body {
 .time-slot.active, .time-slot:hover {
     border-color: #38bdf8;
     color: #38bdf8;
+}
+
+.slot-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.time-slot {
+    text-align: center;
+}
+
+.day-radio:checked + .day {
+    background-color: #10b981;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.slot-radio:checked + .time-slot {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+.day-radio:focus-visible + .day,
+.slot-radio:focus-visible + .time-slot {
+    outline: 2px solid #38bdf8;
+}
+
+input[type="radio"] {
+    display: none;
 }
 
 /* 7. IRITZIAK (TESTIMONIALS) */
